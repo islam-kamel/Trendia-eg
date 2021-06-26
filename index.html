@@ -109,8 +109,38 @@
             <img id="img" class="modal-content" alt="" src="">
         </div>
 
+
+        <!-- Messenger المكون الإضافي "دردشة" Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your المكون الإضافي "دردشة" code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "104222677611994");
+      chatbox.setAttribute("attribution", "biz_inbox");
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/ar_AR/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
         <!--FOOTER-->
         <footer class=" mt-5 modal-footer"><span class="blockquote-footer">copyright &#169; </span></footer>
         <script src="js/main.js"></script>
+
     </body>
 </html>
